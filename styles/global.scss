@@ -1,0 +1,377 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto:wght@300;400;700&display=swap');
+
+@import "~bootstrap/scss/functions";
+@import "variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/code";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/tables";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/dropdown";
+@import "~bootstrap/scss/button-group";
+@import "~bootstrap/scss/input-group";
+@import "~bootstrap/scss/custom-forms";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/card";
+@import "~bootstrap/scss/breadcrumb";
+@import "~bootstrap/scss/pagination";
+@import "~bootstrap/scss/badge";
+@import "~bootstrap/scss/jumbotron";
+@import "~bootstrap/scss/alert";
+@import "~bootstrap/scss/progress";
+@import "~bootstrap/scss/media";
+@import "~bootstrap/scss/list-group";
+@import "~bootstrap/scss/close";
+@import "~bootstrap/scss/toasts";
+@import "~bootstrap/scss/modal";
+@import "~bootstrap/scss/tooltip";
+@import "~bootstrap/scss/popover";
+@import "~bootstrap/scss/carousel";
+@import "~bootstrap/scss/spinners";
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/print";
+@import "~medium-editor/src/sass/medium-editor";
+@import "type";
+@import "backgrounds";
+@import "cards";
+@import "header";
+@import "mdeditor";
+@import "dropzone";
+@import "colorpicker";
+@import "offer";
+@import "footer";
+@import "dashboard";
+@import "cropper";
+@import "blockui";
+
+svg{
+    .white{fill:$white}
+    .primary{fill: $primary}
+    .success{fill: $success}
+    .light{fill: $light}
+    .secondary{fill: $secondary}
+    .stroke-primary{stroke: $primary}
+    .stroke-success{stroke: $success}
+    .stroke-light{stroke: $light}
+    .stroke-secondary{stroke: $secondary}
+    .stroke-primary-faded{stroke: rgba($primary, 0.5)}
+}
+
+
+
+.card-img {
+    position: relative;
+    &:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: (9 / 16) * 100%;
+    }
+    > .img-title {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+
+body{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+div#main{
+    display: block !important;
+}
+
+.invert{
+    background-color: $darkpurple;
+    .content{
+        color: $white;
+    }
+}
+label {
+    font-size: 0.8rem;
+}
+
+.collective-card{
+    color: $black;
+}
+
+
+
+.form-control, div.form-select, .input-group{
+    box-shadow: $input-box-shadow;
+}
+
+.shadow-light{
+    box-shadow: $input-box-shadow;
+}
+img.shadow-light{
+    background: $gray-100;
+}
+.input-group{
+    .form-control{box-shadow:none}
+    .input-group-prepend{background: none;font-size: 0.8rem;}
+    .input-group-text {
+        padding: 0.375rem 0.4rem;
+        margin-bottom: 0;
+        font-size: 0.7rem;
+    }
+}
+
+
+
+.btn.btn-link {box-shadow:none}
+
+.card, .dropdown-menu{box-shadow: 0px 0px 10px rgba($black, 0.1)}
+
+.collective-card, .card.payment{margin-bottom: $grid-gutter-width;}
+
+.airy{
+    margin: $grid-gutter-width 0 
+}
+
+.text-fat{
+    font-family: $headings-font-family;
+}
+
+.btn.round, .badge.round,.input-group.round{
+    border-radius: 20px;
+}
+
+.container.content{padding-top: 60px;padding-bottom: 60px;min-height: 500px;}
+
+.collective-content{ 
+    img {@extend .img-fluid}
+}
+
+
+a.black{
+    color: $black;
+}
+a.black:hover{
+    text-decoration: none;color: $primary;
+}
+
+
+.session-description{
+    margin:20px 0;
+}
+
+
+
+svg.logo{
+    max-width:100%
+}
+
+
+@include media-breakpoint-up(sm) {
+    .navbar-brand svg {
+        max-width: 164px;
+    }
+}
+
+
+
+
+
+h4, h5 {font-family: $font-family-sans-serif; margin:20px 0 10px;}
+h5{font-size: 1rem;line-height: 1.3rem;}
+h4{font-size: 1.1rem;line-height: 1.3rem;}
+h3{font-size: 1.2rem;line-height: 1.4rem;}
+h1{margin:2rem 0}
+
+@keyframes rainbow {
+    0% {text-shadow: 5px 5px $red, 10px 10px $teal; }
+    33% { text-shadow: 5px 5px $orange, 10px 10px $blue; }
+    66% { text-shadow: 5px 5px $purple, 10px 10px $red; }
+    100% { text-shadow: 5px 5px $red, 10px 10px $teal; }
+}
+
+.final-total{
+    color: $darkpurple;
+    font-size: 5rem;
+    animation: rainbow 1.5s linear infinite;
+    animation-direction: alternate;
+}
+
+
+
+
+.invert .final-total{color:$white}
+
+.currency small{font-size: 50%;vertical-align:middle;display:inline-block}
+
+.no-margin{margin:0}
+
+.modal-header .close {
+    padding: 4px 9px;
+    margin: -7px -7px -7px auto;
+}
+
+.modal-header {
+    border:none;
+}
+
+.session-sponsors{
+    a{margin:20px 10px}
+}
+
+.match{
+    @extend .text-fat;
+    @extend .text-success;
+}
+
+.match.big{
+    font-size: 2rem;
+}
+
+.alert.small{padding: 4px;}
+
+.invert .session-info{ 
+    .info-span.card{
+        @extend .invert;
+        @extend .glass;
+        margin: 0 10px 10px 0;
+        
+    }
+}
+.session-info{
+    .current-total{
+        font-size: 4rem;
+        line-height: 4rem;
+        color: $success;
+        margin: 0 10px 0 0;
+        
+    }
+    .info-span{
+        display: inline-block;
+        margin: 10px 10px 10px 0;
+    }
+    .info-span.card{margin: 0 0 20px 0;padding: 5px 10px }
+}
+
+.sort .nav-link.active{color: $primary; font-weight: bold;}
+.sort .nav-link{color: $secondary;}
+.sponsors{
+    margin-top: 1rem;
+    a{display: block;padding:10px 10px;margin-left: -10px;}
+    img{max-width: 100%;max-height:45px}
+}
+
+.similar{
+    background: linear-gradient(rgba($gray-300,.3), rgba($gray-100,.4));
+    margin-bottom: -60px;
+    padding: 40px 0;
+}
+
+.donation-card .matches .match, .donation-card .donation{
+    font-size: 1.3rem;
+}
+
+.circle{
+    margin: 0 auto;
+    border-radius: 50%;
+    width: 100px; height: 100px; padding: 20px;
+   
+    
+}
+.checkout-total{
+    .big {font-size: 2.3rem;}
+}
+
+.checkout-totalmatch{
+    border-radius: $border-radius;
+    background-color: $gray-200;
+   .big {font-size: 2.2rem;}
+}
+
+.btn-oauth svg{ left:30px}
+
+.btn-outline-linkedin:hover, .btn-linkedin {
+    background-color: #0072b1;
+    color:$white !important;
+}
+.btn-outline-facebook:hover, .btn-facebook {
+    background-color: #4267B2;
+    color:$white !important;
+}
+.btn-outline-google:hover, .btn-google {
+    background-color: #db3236;
+    color:$white !important;
+}
+.btn-outline-github:hover, .btn-github {
+    background-color: #333;
+    color:$white !important;
+}
+
+.btn-linkedin:hover, .btn-outline-linkedin {
+    color: #0072b1 !important;
+    border-color: #0072b1;
+    background: $white;
+}
+
+.btn-facebook:hover, .btn-outline-facebook {
+    color: #4267B2 !important;
+    border-color: #4267B2;
+    background: $white;
+}
+.btn-google:hover, .btn-outline-google {
+    color:  #db3236 !important;
+    border-color:  #db3236;
+    background: $white;
+}
+.btn-github:hover, .btn-outline-github {
+    color:#333 !important;
+    border-color: #333;;
+    background: $white;
+}
+
+
+
+
+
+
+@include media-breakpoint-up(md) {
+    .session-header, .thanks-header{
+        background:
+        linear-gradient(279deg, rgba($purple,.3), rgba($darkpurple,0.9) 30%, rgba($purple,.4)), 
+        radial-gradient(ellipse at bottom, rgba($teal,.9), rgba($orange,.3)),
+        $darkpurple
+    }
+    .donation-card .matches .match, .donation-card .donation{
+        font-size: 1.8rem;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .authDropdownLabel span{display:none}
+    .navbar-toggler-icon {margin-left: -13px;}
+    header a.navbar-brand svg.logo{max-width:110px}
+    header .btn{padding: 0.1rem 0.2rem;}
+    .match.big{
+        font-size: 1.2rem;
+    }
+    header .auth{ right:10px; }
+    header .btn-cart{ right:80px; }
+}
+
+
+
+
+.StripeElement--complete{
+    @extend .is-valid;
+}
+
+.alert {background: none;} 

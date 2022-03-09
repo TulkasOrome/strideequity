@@ -1,0 +1,134 @@
+header .navbar.inverted{
+    .navbar-toggler{
+        color:#fff;
+    }
+    .navbar-nav .nav-link {
+        color:#fff;
+        border-bottom: 1px solid transparent;
+    }
+    .navbar-nav .nav-link:hover {
+        color:#fff;
+        border-bottom: 1px solid $white;
+    }
+    .btn.btn-link{
+        color:#fff;
+    }
+    color:#fff
+} 
+header{
+    .navbar{
+        padding-top:25px;
+    }
+    a.navbar-brand {margin-top:-15px}
+    #primary-nav{margin-left:40px;}
+    .navbar-light .navbar-nav .nav-link {
+        color:$white;
+        font-weight: 400;
+        font-size: 1rem;
+        margin-right: 30px;
+        padding: 4px 0;
+    }
+    .navbar-light .navbar-nav .nav-link.active {
+        color:$white;
+        border-bottom: 1px solid $white;
+    }
+    .navbar-light.regular .navbar-nav .nav-link,.navbar-light.regular .navbar-nav .nav-link:hover {
+        color:$black;
+        font-weight: 400;
+        font-size: 1rem;
+    }
+    .navbar-light.regular .navbar-nav .nav-link.active {
+        color:$black;
+        border-bottom: 1px solid $black;
+    }
+}
+
+header.scrolled {
+    .navbar{
+        background: transparentize($white, 0.1);
+        box-shadow: 0px 4px 24px rgba($black, 0.2);
+        padding: 10px 0 5px;
+    }
+    .navbar.inverted  .navbar-nav .nav-link {
+        color:$black;
+    }
+    .navbar.inverted .nav-link:hover {
+        color:$black;
+        border-bottom: 1px solid $black;
+    }
+    .navbar.inverted .btn.btn-link{
+        color:$black;
+    }
+}
+
+
+
+.headerContent {height:600px; padding-top:140px}
+
+.headerOffer {min-height:450px; padding-top:120px}
+
+.image-header-dark{
+    color: $white;
+    .btn.btn-link{
+        color: $white;
+    }
+}
+.image-header-light{
+    color: $black;
+    .btn.btn-link{
+        color: $black;
+    }
+}
+.image-header{
+    text-align: center;
+    height: 56.25vw;
+    max-height: 550px;
+    display: flex;
+}
+
+h1.display-1{
+    font-weight: 300;
+}
+
+header .navbar-light .navbar-toggler{border: none}
+
+@include media-breakpoint-down(md) {
+    .image-header{
+        display:block;
+        max-height: auto;
+        height: auto;
+        padding-top:200px;
+    }
+    .auth-links{
+        display: block;
+        width:300px;
+        text-align: right;
+        a.nav-link {display: inline;}
+    }
+    header .navbar-toggler{
+        position: absolute;
+        top: 3px;
+        left:20px;
+    }
+    header .navbar{height:40px}
+    header a.navbar-brand svg.logo{max-width:120px}
+    header .logo{
+        position: absolute;
+        top: -10px;
+        left:80px;
+    }
+    #primary-nav{
+        background: $black;
+        padding: 10px 0 10px 20px;
+        margin-top: 20px;
+        margin-left: -20px;
+    }
+    .navbar-light #primary-nav {
+        background: $black;
+    }
+    header #authlinks{
+        position: absolute;
+        top: 10px;
+        right:20px;
+    }
+}

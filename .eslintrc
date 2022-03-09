@@ -1,0 +1,61 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@next/next/recommended"
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "rules": {
+    "import/extensions": "off",
+    "no-underscore-dangle": [
+      "error",
+      {
+        "allow": [
+          "_id"
+        ]
+      }
+    ],
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "no-trailing-spaces":"off",
+    "jsx-a11y/anchor-is-valid":"off",
+    "linebreak-style":"off"
+  },
+  "overrides": [{
+    "files": ["*.jsx"],
+    "plugins": ["eslint-plugin-jsx-a11y"],
+    "extends": [
+      "plugin:react/recommended"
+    ],
+    "parserOptions": {
+      "ecmaversion": 2018,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    },
+
+    /**
+     * Typescript Rules
+     */
+    "rules": {
+    }
+  }]
+  
+}
